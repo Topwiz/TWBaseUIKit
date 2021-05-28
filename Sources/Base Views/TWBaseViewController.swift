@@ -11,9 +11,8 @@ import UIKit
 open class TWBaseViewController: UIViewController {
     
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nil, bundle: nil)
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         manager.logging(type(of: self), type: .viewInit)
-        
         initial()
     }
     
@@ -25,7 +24,9 @@ open class TWBaseViewController: UIViewController {
     }
     
     required public init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        manager.logging(type(of: self), type: .viewInit)
+        initial()
     }
     
     open var statusBarColor: UIStatusBarStyle {
