@@ -7,18 +7,13 @@
 //
 
 import UIKit
+import TWBaseUIKit
 
-class ViewController: UIViewController {
+class ViewController: TWBaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func setUI() {
+        super.setUI()
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
 }
-

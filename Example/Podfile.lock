@@ -1,0 +1,16 @@
+PODS:
+  - TWBaseUIKit (0.1.0)
+
+DEPENDENCIES:
+  - TWBaseUIKit (from `../`)
+
+EXTERNAL SOURCES:
+  TWBaseUIKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TWBaseUIKit: 8777bab992bde2bd7822edff2c63bf91fb9c3697
+
+PODFILE CHECKSUM: bef343424acda1188993be01060449edd29c9afb
+
+COCOAPODS: 1.10.1

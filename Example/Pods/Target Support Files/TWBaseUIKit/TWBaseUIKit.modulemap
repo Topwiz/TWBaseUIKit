@@ -1,0 +1,6 @@
+framework module TWBaseUIKit {
+  umbrella header "TWBaseUIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

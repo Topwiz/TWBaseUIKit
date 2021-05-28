@@ -1,0 +1,6 @@
+framework module Pods_TWBaseUIKit_Tests {
+  umbrella header "Pods-TWBaseUIKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
