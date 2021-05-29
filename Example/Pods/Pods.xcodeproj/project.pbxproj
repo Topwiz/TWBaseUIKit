@@ -26,6 +26,10 @@
 		57D750B62662296D000E83D0 /* TWBaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D750B52662296D000E83D0 /* TWBaseCollectionViewController.swift */; };
 		57D750B8266229A9000E83D0 /* TWBaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D750B7266229A9000E83D0 /* TWBaseTextField.swift */; };
 		57D750BB26622A32000E83D0 /* TWBaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D750B7266229A9000E83D0 /* TWBaseTextField.swift */; };
+		57D750BD26622E58000E83D0 /* TWBaseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D750BC26622E58000E83D0 /* TWBaseTextView.swift */; };
+		57D750BE26622E58000E83D0 /* TWBaseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D750BC26622E58000E83D0 /* TWBaseTextView.swift */; };
+		57D750C026622F17000E83D0 /* TWBaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D750BF26622F17000E83D0 /* TWBaseImageView.swift */; };
+		57D750C126622F17000E83D0 /* TWBaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D750BF26622F17000E83D0 /* TWBaseImageView.swift */; };
 		59EC87002C7B82135C78AB51FAC15179 /* TWBaseUIKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E1281312CC2243CE987CAD51BB5D4FA9 /* TWBaseUIKit-dummy.m */; };
 		72C5B1BD527A912709D04449BFF399FD /* Pods-TWBaseUIKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E189AA68FDC030516D6D9D09D1AAAE /* Pods-TWBaseUIKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF840DA41E05417AC7AD3878A3D402DE /* Pods-TWBaseUIKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 853D7978632F7DA88262310B81B7FF01 /* Pods-TWBaseUIKit_Example-dummy.m */; };
@@ -70,6 +74,8 @@
 		57D750B326622923000E83D0 /* TWBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWBaseTableViewController.swift; sourceTree = "<group>"; };
 		57D750B52662296D000E83D0 /* TWBaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWBaseCollectionViewController.swift; sourceTree = "<group>"; };
 		57D750B7266229A9000E83D0 /* TWBaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWBaseTextField.swift; sourceTree = "<group>"; };
+		57D750BC26622E58000E83D0 /* TWBaseTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWBaseTextView.swift; sourceTree = "<group>"; };
+		57D750BF26622F17000E83D0 /* TWBaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWBaseImageView.swift; sourceTree = "<group>"; };
 		62E56F216A420444E01CEA7E2835DEE7 /* Pods-TWBaseUIKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TWBaseUIKit_Example-Info.plist"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7EDDD202B2015CAD250283BEC984DC58 /* Pods-TWBaseUIKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TWBaseUIKit_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -206,6 +212,8 @@
 				57D750A82661FD65000E83D0 /* TWBaseButton.swift */,
 				57D750AE266200C4000E83D0 /* TWBaseLabel.swift */,
 				57D750B7266229A9000E83D0 /* TWBaseTextField.swift */,
+				57D750BC26622E58000E83D0 /* TWBaseTextView.swift */,
+				57D750BF26622F17000E83D0 /* TWBaseImageView.swift */,
 			);
 			path = "Base Views";
 			sourceTree = "<group>";
@@ -427,8 +435,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D750C026622F17000E83D0 /* TWBaseImageView.swift in Sources */,
 				57D7508E2660D163000E83D0 /* TWBaseViewController.swift in Sources */,
 				57D750B62662296D000E83D0 /* TWBaseCollectionViewController.swift in Sources */,
+				57D750BD26622E58000E83D0 /* TWBaseTextView.swift in Sources */,
 				57D750AF266200C4000E83D0 /* TWBaseLabel.swift in Sources */,
 				57D750A92661FD65000E83D0 /* TWBaseButton.swift in Sources */,
 				57D750952660D75D000E83D0 /* UIStatusBarStyle+Extensions.swift in Sources */,
@@ -444,11 +454,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D750C126622F17000E83D0 /* TWBaseImageView.swift in Sources */,
 				57D750992660F77B000E83D0 /* TWBaseViewController.swift in Sources */,
 				57D750B0266200C7000E83D0 /* TWBaseLabel.swift in Sources */,
 				57D750AD2661FF94000E83D0 /* TWBaseButton.swift in Sources */,
 				57D7509B2660F781000E83D0 /* UIStatusBarStyle+Extensions.swift in Sources */,
 				57D750A126614F89000E83D0 /* TWBaseView.swift in Sources */,
+				57D750BE26622E58000E83D0 /* TWBaseTextView.swift in Sources */,
 				57D7509A2660F77E000E83D0 /* TWBaseViewManager.swift in Sources */,
 				59EC87002C7B82135C78AB51FAC15179 /* TWBaseUIKit-dummy.m in Sources */,
 				57D750BB26622A32000E83D0 /* TWBaseTextField.swift in Sources */,

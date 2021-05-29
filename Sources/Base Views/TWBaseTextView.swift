@@ -1,6 +1,6 @@
 //
-//  TWBaseButton.swift
-//  Pods-TWBaseUIKit_Example
+//  TWBaseTextView.swift
+//  Pods
 //
 //  Created by Jeehoon Son on 2021/05/29.
 //
@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-open class TWBaseButton: UIButton {
+open class TWBaseTextView: UITextView {
     
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
+    public override init(frame: CGRect, textContainer: NSTextContainer?) {
+        super.init(frame: frame, textContainer: textContainer)
         initial()
     }
     
@@ -38,16 +38,14 @@ open class TWBaseButton: UIButton {
     }
     
     open func setup() {
+        backgroundColor = manager.option.defaultViewBackgroundColor
         translatesAutoresizingMaskIntoConstraints = manager.option.defaultTranslatesAutoresizingMaskIntoConstraints
-        imageView?.contentMode = manager.option.defaultImageContentMode
-        setTitleColor(manager.option.defaultLabelColor, for: .normal)
-        titleLabel?.font = manager.option.defaultFont
+        font = manager.option.defaultFont
+        textColor = manager.option.defaultLabelColor
     }
     
     open func setLayout() {
         
     }
+    
 }
-
- 
-

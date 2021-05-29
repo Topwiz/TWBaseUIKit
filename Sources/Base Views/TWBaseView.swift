@@ -12,20 +12,24 @@ open class TWBaseView: UIView {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        manager.logging(type(of: self), type: .viewInit)
-        
-        addSubviews.forEach({ addSubview($0) })
-        setup()
-        setLayout()
+        initial()
     }
     
     required public init?(coder: NSCoder) {
         super.init(coder: coder)
-        manager.logging(type(of: self), type: .viewInit)
+        initial()
     }
     
     deinit {
         manager.logging(type(of: self), type: .viewDeInit)
+    }
+    
+    private func initial() {
+        manager.logging(type(of: self), type: .extViewInit)
+        
+        addSubviews.forEach({ addSubview($0) })
+        setup()
+        setLayout()
     }
     
     //MARK: - Set UI

@@ -12,20 +12,24 @@ open class TWBaseTextField: UITextField {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        initial()
+    }
+    
+    required public init?(coder: NSCoder) {
+        super.init(coder: coder)
+        initial()
+    }
+    
+    deinit {
+        manager.logging(type(of: self), type: .extViewDeInit)
+    }
+    
+    private func initial() {
         manager.logging(type(of: self), type: .extViewInit)
         
         addSubviews.forEach({ addSubview($0) })
         setup()
         setLayout()
-    }
-    
-    required public init?(coder: NSCoder) {
-        super.init(coder: coder)
-        manager.logging(type(of: self), type: .extViewInit)
-    }
-    
-    deinit {
-        manager.logging(type(of: self), type: .extViewDeInit)
     }
     
     //MARK: - Set UI
