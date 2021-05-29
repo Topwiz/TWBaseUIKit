@@ -15,7 +15,7 @@ public class TWBaseViewManager {
     public struct Option {
         // Common
         public var logging = true
-        public var loggingLevel: LoggingLevel = .medium
+        public var loggingLevel: LoggingLevel = .high
         public var defaultViewBackgroundColor: UIColor = .white
         public var defaultStatusBarColor: UIStatusBarStyle = .black
         
@@ -46,8 +46,13 @@ public class TWBaseViewManager {
             switch self {
             case .low:
                 return [.viewInit, .viewDeInit]
-            case .medium, .high:
+            case .medium:
                 return [.viewInit, .viewDeInit,
+                        .viewDidLoad, .viewWillAppear,
+                        .viewDidAppear, .viewWillDisappear,
+                        .viewDidDisappear]
+            case .high:
+                return [.viewInit, .viewDeInit, .extViewInit, .extViewDeInit,
                         .viewDidLoad, .viewWillAppear,
                         .viewDidAppear, .viewWillDisappear,
                         .viewDidDisappear]

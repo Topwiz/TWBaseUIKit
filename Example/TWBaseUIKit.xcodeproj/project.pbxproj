@@ -10,6 +10,7 @@
 		57D750A42661F9D9000E83D0 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D750A32661F9D9000E83D0 /* CustomView.swift */; };
 		57D750AC2661FF7D000E83D0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D750AB2661FF7D000E83D0 /* CustomButton.swift */; };
 		57D750B226620176000E83D0 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D750B126620176000E83D0 /* CustomLabel.swift */; };
+		57D750BA26622A2C000E83D0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D750B926622A2C000E83D0 /* CustomTextField.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* CustomViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		57D750A32661F9D9000E83D0 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		57D750AB2661FF7D000E83D0 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		57D750B126620176000E83D0 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		57D750B926622A2C000E83D0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* TWBaseUIKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWBaseUIKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				57D750A32661F9D9000E83D0 /* CustomView.swift */,
 				57D750AB2661FF7D000E83D0 /* CustomButton.swift */,
 				57D750B126620176000E83D0 /* CustomLabel.swift */,
+				57D750B926622A2C000E83D0 /* CustomTextField.swift */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			files = (
 				57D750AC2661FF7D000E83D0 /* CustomButton.swift in Sources */,
 				57D750B226620176000E83D0 /* CustomLabel.swift in Sources */,
+				57D750BA26622A2C000E83D0 /* CustomTextField.swift in Sources */,
 				57D750A42661F9D9000E83D0 /* CustomView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* CustomViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,

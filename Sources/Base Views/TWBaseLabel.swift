@@ -11,7 +11,7 @@ open class TWBaseLabel: UILabel {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        manager.logging(type(of: self), type: .viewInit)
+        manager.logging(type(of: self), type: .extViewInit)
         
         addSubviews.forEach({ addSubview($0) })
         setup()
@@ -20,11 +20,11 @@ open class TWBaseLabel: UILabel {
     
     required public init?(coder: NSCoder) {
         super.init(coder: coder)
-        manager.logging(type(of: self), type: .viewInit)
+        manager.logging(type(of: self), type: .extViewInit)
     }
     
     deinit {
-        manager.logging(type(of: self), type: .viewDeInit)
+        manager.logging(type(of: self), type: .extViewDeInit)
     }
     
     //MARK: - Set UI

@@ -13,9 +13,11 @@ class CustomViewController: TWBaseViewController {
     let customView = CustomView()
     let customButton = CustomButton()
     let customLabel = CustomLabel()
+    let customTextField = CustomTextField()
     
     override var addSubviews: [UIView] {
-        return [customView, customButton, customLabel]
+        return [customView, customButton,
+                customLabel, customTextField]
     }
     
     override func setup() {
@@ -39,6 +41,9 @@ class CustomViewController: TWBaseViewController {
             customLabel.topAnchor.constraint(equalTo: customButton.bottomAnchor),
             customLabel.leadingAnchor.constraint(equalTo: customButton.leadingAnchor),
             
+            customTextField.topAnchor.constraint(equalTo: customLabel.bottomAnchor, constant: 8),
+            customTextField.leadingAnchor.constraint(equalTo: customButton.leadingAnchor),
+            customTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
     }
     
