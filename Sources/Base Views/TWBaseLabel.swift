@@ -1,14 +1,13 @@
 //
-//  TWBaseView.swift
+//  TWBaseLabel.swift
 //  Pods-TWBaseUIKit_Example
 //
 //  Created by Jeehoon Son on 2021/05/29.
 //
 
 import Foundation
-import UIKit
 
-open class TWBaseView: UIView {
+open class TWBaseLabel: UILabel {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,8 +33,9 @@ open class TWBaseView: UIView {
     }
     
     open func setup() {
-        backgroundColor = manager.option.defaultViewBackgroundColor
         translatesAutoresizingMaskIntoConstraints = manager.option.defaultTranslatesAutoresizingMaskIntoConstraints
+        textColor = manager.option.defaultLabelColor
+        font = manager.option.defaultFont
     }
     
     open func setLayout() {
@@ -44,3 +44,4 @@ open class TWBaseView: UIView {
 }
 
  
+

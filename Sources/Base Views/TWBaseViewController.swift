@@ -77,7 +77,7 @@ open class TWBaseViewController: UIViewController {
     }
 
     open func setup() {
-        view.backgroundColor = manager.option.defaultBackgroundColor
+        view.backgroundColor = manager.option.defaultViewBackgroundColor
     }
 
     open func setLayout() {

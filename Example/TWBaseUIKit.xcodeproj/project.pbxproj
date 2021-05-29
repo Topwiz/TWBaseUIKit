@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		57D750A42661F9D9000E83D0 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D750A32661F9D9000E83D0 /* CustomView.swift */; };
+		57D750AC2661FF7D000E83D0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D750AB2661FF7D000E83D0 /* CustomButton.swift */; };
+		57D750B226620176000E83D0 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D750B126620176000E83D0 /* CustomLabel.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* CustomViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 		2A9FDCE1EB799D301BCA3D27 /* Pods-TWBaseUIKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWBaseUIKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-TWBaseUIKit_Example/Pods-TWBaseUIKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		56310F307705A8D4847DA569 /* Pods_TWBaseUIKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWBaseUIKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D750A32661F9D9000E83D0 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		57D750AB2661FF7D000E83D0 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		57D750B126620176000E83D0 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* TWBaseUIKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWBaseUIKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 			children = (
 				607FACD71AFB9204008FA782 /* CustomViewController.swift */,
 				57D750A32661F9D9000E83D0 /* CustomView.swift */,
+				57D750AB2661FF7D000E83D0 /* CustomButton.swift */,
+				57D750B126620176000E83D0 /* CustomLabel.swift */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -342,6 +348,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D750AC2661FF7D000E83D0 /* CustomButton.swift in Sources */,
+				57D750B226620176000E83D0 /* CustomLabel.swift in Sources */,
 				57D750A42661F9D9000E83D0 /* CustomView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* CustomViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,

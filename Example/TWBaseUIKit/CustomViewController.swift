@@ -10,10 +10,12 @@ import TWBaseUIKit
 
 class CustomViewController: TWBaseViewController {
     
-    lazy var customView = CustomView()
+    let customView = CustomView()
+    let customButton = CustomButton()
+    let customLabel = CustomLabel()
     
     override var addSubviews: [UIView] {
-        return [customView]
+        return [customView, customButton, customLabel]
     }
     
     override func setup() {
@@ -29,7 +31,14 @@ class CustomViewController: TWBaseViewController {
             customView.topAnchor.constraint(equalTo: view.topAnchor),
             customView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             customView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            customView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.7)
+            customView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.7),
+            
+            customButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 16),
+            customButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            
+            customLabel.topAnchor.constraint(equalTo: customButton.bottomAnchor),
+            customLabel.leadingAnchor.constraint(equalTo: customButton.leadingAnchor),
+            
         ])
     }
     

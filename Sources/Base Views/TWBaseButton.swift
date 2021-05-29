@@ -1,5 +1,5 @@
 //
-//  TWBaseView.swift
+//  TWBaseButton.swift
 //  Pods-TWBaseUIKit_Example
 //
 //  Created by Jeehoon Son on 2021/05/29.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-open class TWBaseView: UIView {
+open class TWBaseButton: UIButton {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,8 +34,10 @@ open class TWBaseView: UIView {
     }
     
     open func setup() {
-        backgroundColor = manager.option.defaultViewBackgroundColor
         translatesAutoresizingMaskIntoConstraints = manager.option.defaultTranslatesAutoresizingMaskIntoConstraints
+        imageView?.contentMode = manager.option.defaultImageContentMode
+        setTitleColor(manager.option.defaultLabelColor, for: .normal)
+        titleLabel?.font = manager.option.defaultFont
     }
     
     open func setLayout() {
@@ -44,3 +46,4 @@ open class TWBaseView: UIView {
 }
 
  
+
