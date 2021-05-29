@@ -10,7 +10,7 @@ import Foundation
 let manager = TWBaseViewManager.shared
 
 public class TWBaseViewManager {
-    static var shared = TWBaseViewManager()
+    public static var shared = TWBaseViewManager()
     
     public struct Option {
         // Common
@@ -19,11 +19,12 @@ public class TWBaseViewManager {
         public var defaultBackgroundColor: UIColor = .white
         public var defaultStatusBarColor: UIStatusBarStyle = .black
         
-        
-        // TWBaseViewController
+        // TWBaseView
         public var removeObserverWhenDeInit = true
+        public var defaultTranslatesAutoresizingMaskIntoConstraints = false
+        
     }
-    
+
     public var option = Option()
     
     //MARK: - Logging

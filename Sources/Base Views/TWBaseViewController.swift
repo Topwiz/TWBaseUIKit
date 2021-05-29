@@ -41,7 +41,9 @@ open class TWBaseViewController: UIViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         manager.logging(type(of: self), type: .viewDidLoad)
-        setUI()
+        addSubviews.forEach({ view.addSubview($0) })
+        setup()
+        setLayout()
     }
     
     open override func viewWillAppear(_ animated: Bool) {
@@ -66,11 +68,19 @@ open class TWBaseViewController: UIViewController {
     
     //MARK: - Initial
     open func initial() {
-        
+
     }
     
     //MARK: - Set UI
-    open func setUI() {
+    open var addSubviews: [UIView] {
+        return []
+    }
+
+    open func setup() {
         view.backgroundColor = manager.option.defaultBackgroundColor
+    }
+
+    open func setLayout() {
+
     }
 }
