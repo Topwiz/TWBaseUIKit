@@ -1,19 +1,13 @@
 //
-//  TWBaseLabel.swift
-//  Pods-TWBaseUIKit_Example
+//  TWBaseScrollView.swift
+//  Pods
 //
-//  Created by Jeehoon Son on 2021/05/29.
+//  Created by Jeehoon Son on 2021/05/30.
 //
 
 import Foundation
 
-open class TWBaseLabel: UILabel {
-    
-    public init(text: String = "") {
-        super.init(frame: .zero)
-        self.text = text
-        initial()
-    }
+open class TWBaseScrollView: UIScrollView {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,11 +20,11 @@ open class TWBaseLabel: UILabel {
     }
     
     deinit {
-        manager.logging(type(of: self), type: .extViewDeInit)
+        manager.logging(type(of: self), type: .extViewInit)
     }
     
     private func initial() {
-        manager.logging(type(of: self), type: .extViewInit)
+        manager.logging(type(of: self), type: .extViewDeInit)
         
         addSubviews.forEach({ addSubview($0) })
         setup()
@@ -43,15 +37,12 @@ open class TWBaseLabel: UILabel {
     }
     
     open func setup() {
+        backgroundColor = manager.option.defaultViewBackgroundColor
         translatesAutoresizingMaskIntoConstraints = manager.option.defaultTranslatesAutoresizingMaskIntoConstraints
-        textColor = manager.option.defaultLabelColor
-        font = manager.option.defaultFont
     }
     
     open func setLayout() {
         
     }
+    
 }
-
- 
-

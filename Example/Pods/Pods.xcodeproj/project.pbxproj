@@ -14,6 +14,10 @@
 		5771EE492663247700BB281A /* TWBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5771EE472663247700BB281A /* TWBaseNavigationController.swift */; };
 		5771EE4B266325C800BB281A /* TWBaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5771EE4A266325C800BB281A /* TWBaseTabBarController.swift */; };
 		5771EE4C266325C800BB281A /* TWBaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5771EE4A266325C800BB281A /* TWBaseTabBarController.swift */; };
+		5771EE4E26634F9500BB281A /* TWBaseScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5771EE4D26634F9500BB281A /* TWBaseScrollView.swift */; };
+		5771EE4F26634F9500BB281A /* TWBaseScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5771EE4D26634F9500BB281A /* TWBaseScrollView.swift */; };
+		5771EE512663605F00BB281A /* TWBaseSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5771EE502663605F00BB281A /* TWBaseSegmentedControl.swift */; };
+		5771EE522663605F00BB281A /* TWBaseSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5771EE502663605F00BB281A /* TWBaseSegmentedControl.swift */; };
 		57D7508E2660D163000E83D0 /* TWBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D7508D2660D163000E83D0 /* TWBaseViewController.swift */; };
 		57D750902660D2B9000E83D0 /* TWBaseViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D7508F2660D2B9000E83D0 /* TWBaseViewManager.swift */; };
 		57D750952660D75D000E83D0 /* UIStatusBarStyle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D750942660D75D000E83D0 /* UIStatusBarStyle+Extensions.swift */; };
@@ -79,6 +83,8 @@
 		5460C6E4F74D78FB5FF38F61EFA3D436 /* TWBaseUIKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TWBaseUIKit-prefix.pch"; sourceTree = "<group>"; };
 		5771EE472663247700BB281A /* TWBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWBaseNavigationController.swift; sourceTree = "<group>"; };
 		5771EE4A266325C800BB281A /* TWBaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWBaseTabBarController.swift; sourceTree = "<group>"; };
+		5771EE4D26634F9500BB281A /* TWBaseScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWBaseScrollView.swift; sourceTree = "<group>"; };
+		5771EE502663605F00BB281A /* TWBaseSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWBaseSegmentedControl.swift; sourceTree = "<group>"; };
 		57D7508D2660D163000E83D0 /* TWBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWBaseViewController.swift; sourceTree = "<group>"; };
 		57D7508F2660D2B9000E83D0 /* TWBaseViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWBaseViewManager.swift; sourceTree = "<group>"; };
 		57D750942660D75D000E83D0 /* UIStatusBarStyle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStatusBarStyle+Extensions.swift"; sourceTree = "<group>"; };
@@ -234,10 +240,12 @@
 				57D750B7266229A9000E83D0 /* TWBaseTextField.swift */,
 				57D750BC26622E58000E83D0 /* TWBaseTextView.swift */,
 				57D750BF26622F17000E83D0 /* TWBaseImageView.swift */,
+				5771EE4D26634F9500BB281A /* TWBaseScrollView.swift */,
 				57D750C426628E20000E83D0 /* TWBaseTableView.swift */,
 				57D750C7266290C5000E83D0 /* TWBaseCollectionView.swift */,
 				57D750CA26629113000E83D0 /* TWBaseTableViewCell.swift */,
 				57D750CD2662918E000E83D0 /* TWBaseCollectionViewCell.swift */,
+				5771EE502663605F00BB281A /* TWBaseSegmentedControl.swift */,
 			);
 			path = "Base Views";
 			sourceTree = "<group>";
@@ -462,6 +470,7 @@
 				5771EE482663247700BB281A /* TWBaseNavigationController.swift in Sources */,
 				57D750C8266290C5000E83D0 /* TWBaseCollectionView.swift in Sources */,
 				57D750C026622F17000E83D0 /* TWBaseImageView.swift in Sources */,
+				5771EE512663605F00BB281A /* TWBaseSegmentedControl.swift in Sources */,
 				57D7508E2660D163000E83D0 /* TWBaseViewController.swift in Sources */,
 				57D750B62662296D000E83D0 /* TWBaseCollectionViewController.swift in Sources */,
 				57D750C526628E20000E83D0 /* TWBaseTableView.swift in Sources */,
@@ -472,6 +481,7 @@
 				57D750A92661FD65000E83D0 /* TWBaseButton.swift in Sources */,
 				57D750952660D75D000E83D0 /* UIStatusBarStyle+Extensions.swift in Sources */,
 				57D750B8266229A9000E83D0 /* TWBaseTextField.swift in Sources */,
+				5771EE4E26634F9500BB281A /* TWBaseScrollView.swift in Sources */,
 				57D750A026614E37000E83D0 /* TWBaseView.swift in Sources */,
 				57D750902660D2B9000E83D0 /* TWBaseViewManager.swift in Sources */,
 				AF840DA41E05417AC7AD3878A3D402DE /* Pods-TWBaseUIKit_Example-dummy.m in Sources */,
@@ -487,6 +497,7 @@
 				57D750CF2662918E000E83D0 /* TWBaseCollectionViewCell.swift in Sources */,
 				57D750C126622F17000E83D0 /* TWBaseImageView.swift in Sources */,
 				57D750992660F77B000E83D0 /* TWBaseViewController.swift in Sources */,
+				5771EE522663605F00BB281A /* TWBaseSegmentedControl.swift in Sources */,
 				57D750C9266290C5000E83D0 /* TWBaseCollectionView.swift in Sources */,
 				57D750B0266200C7000E83D0 /* TWBaseLabel.swift in Sources */,
 				57D750AD2661FF94000E83D0 /* TWBaseButton.swift in Sources */,
@@ -497,6 +508,7 @@
 				57D7509A2660F77E000E83D0 /* TWBaseViewManager.swift in Sources */,
 				59EC87002C7B82135C78AB51FAC15179 /* TWBaseUIKit-dummy.m in Sources */,
 				57D750CC26629113000E83D0 /* TWBaseTableViewCell.swift in Sources */,
+				5771EE4F26634F9500BB281A /* TWBaseScrollView.swift in Sources */,
 				5771EE4C266325C800BB281A /* TWBaseTabBarController.swift in Sources */,
 				57D750BB26622A32000E83D0 /* TWBaseTextField.swift in Sources */,
 				57D750C626628E20000E83D0 /* TWBaseTableView.swift in Sources */,

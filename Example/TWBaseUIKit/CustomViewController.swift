@@ -10,8 +10,8 @@ import TWBaseUIKit
 
 class CustomViewController: TWBaseViewController {
     
-    let customView = CustomView()
-    let customButton = CustomButton()
+    let customView = CustomView(enableTap: true)
+    let customButton = CustomButton(title: "Custom Button")
     let customLabel = CustomLabel()
     let customTextField = CustomTextField()
     let customTextView = CustomTextView()
@@ -24,7 +24,9 @@ class CustomViewController: TWBaseViewController {
     
     override func setup() {
         super.setup()
-        
+        customButton.tapped = {
+            print("customButtonTapped")
+        }
         
     }
     

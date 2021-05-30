@@ -14,6 +14,5 @@ class CustomButton: TWBaseButton {
     override func setup() {
         super.setup()
         
-        setTitle("Custom Button", for: .normal)
     }
 }

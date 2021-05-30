@@ -1,17 +1,21 @@
 //
-//  TWBaseLabel.swift
-//  Pods-TWBaseUIKit_Example
+//  TWBaseSegment.swift
+//  Pods
 //
-//  Created by Jeehoon Son on 2021/05/29.
+//  Created by Jeehoon Son on 2021/05/30.
 //
 
 import Foundation
 
-open class TWBaseLabel: UILabel {
+open class TWBaseSegmentedControl: UISegmentedControl {
     
-    public init(text: String = "") {
+    public var tapped: ((Int) -> ())?
+    
+    public init(titleArray: [String] = []) {
         super.init(frame: .zero)
-        self.text = text
+        titleArray.enumerated().forEach({
+            setTitle($0.element, forSegmentAt: $0.offset)
+        })
         initial()
     }
     
@@ -26,11 +30,11 @@ open class TWBaseLabel: UILabel {
     }
     
     deinit {
-        manager.logging(type(of: self), type: .extViewDeInit)
+        manager.logging(type(of: self), type: .extViewInit)
     }
     
     private func initial() {
-        manager.logging(type(of: self), type: .extViewInit)
+        manager.logging(type(of: self), type: .extViewDeInit)
         
         addSubviews.forEach({ addSubview($0) })
         setup()
@@ -43,15 +47,17 @@ open class TWBaseLabel: UILabel {
     }
     
     open func setup() {
+        backgroundColor = manager.option.defaultViewBackgroundColor
         translatesAutoresizingMaskIntoConstraints = manager.option.defaultTranslatesAutoresizingMaskIntoConstraints
-        textColor = manager.option.defaultLabelColor
-        font = manager.option.defaultFont
+        addTarget(self, action: #selector(valueChanged(_:)), for: .valueChanged)
     }
     
     open func setLayout() {
         
     }
+    
+    @objc private func valueChanged(_ sender: UISegmentedControl) {
+        tapped?(sender.selectedSegmentIndex)
+    }
+    
 }
-
- 
-

@@ -10,6 +10,12 @@ import UIKit
 
 open class TWBaseButton: UIButton {
     
+    public init(title: String = "") {
+        super.init(frame: .zero)
+        setTitle(title, for: .normal)
+        initial()
+    }
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         initial()
@@ -23,6 +29,8 @@ open class TWBaseButton: UIButton {
     deinit {
         manager.logging(type(of: self), type: .extViewDeInit)
     }
+    
+    public var tapped: (()->())?
     
     private func initial() {
         manager.logging(type(of: self), type: .extViewInit)
@@ -42,10 +50,16 @@ open class TWBaseButton: UIButton {
         imageView?.contentMode = manager.option.defaultImageContentMode
         setTitleColor(manager.option.defaultLabelColor, for: .normal)
         titleLabel?.font = manager.option.defaultFont
+        
+        addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
     }
     
     open func setLayout() {
         
+    }
+    
+    @objc private func buttonTapped(_ sender: UIButton) {
+        tapped?()
     }
 }
 
