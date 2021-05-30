@@ -35,28 +35,27 @@ public class TWBaseViewManager {
     
     //MARK: - Logging
     public enum LoggingLevel: Int {
-        /// Only UIView, UIViewController` init` and `deinit` logging
+        /// Only UIView, UIViewController` init`, `deinit`, `memory warning` logging
         case low
-        /// UIView, UIViewController `init`, `deinit`, `View Controller LifeCycle` logging
+        /// UIView, UIViewController `init`, `deinit`, `memory warning`, `View Controller LifeCycle` logging
         case medium
-        /// All view `init`, `deinit`, `LifeCycle` logging
+        /// All view `init`, `deinit`, `memory warning`, `LifeCycle` logging
         case high
         
         var loggingTypes: [LoggingType] {
-            switch self {
-            case .low:
-                return [.viewInit, .viewDeInit]
-            case .medium:
-                return [.viewInit, .viewDeInit,
-                        .viewDidLoad, .viewWillAppear,
-                        .viewDidAppear, .viewWillDisappear,
-                        .viewDidDisappear]
-            case .high:
-                return [.viewInit, .viewDeInit, .extViewInit, .extViewDeInit,
-                        .viewDidLoad, .viewWillAppear,
-                        .viewDidAppear, .viewWillDisappear,
-                        .viewDidDisappear]
+            var types = [LoggingType]()
+            if self.rawValue >= 0 {
+                types.append(contentsOf: [.viewInit, .viewDeInit, .memoryWarning])
             }
+            if self.rawValue > 0 {
+                types.append(contentsOf: [.viewDidLoad, .viewWillAppear,
+                                          .viewDidAppear, .viewWillDisappear,
+                                          .viewDidDisappear])
+            }
+            if self.rawValue > 1 {
+                types.append(contentsOf: [.extViewInit, .extViewDeInit,])
+            }
+            return types
         }
     }
     
@@ -70,12 +69,14 @@ public class TWBaseViewManager {
         case viewDidAppear
         case viewWillDisappear
         case viewDidDisappear
+        case memoryWarning
         
         var description: String {
             switch self {
-            case .viewInit, .extViewInit: return "init"
-            case .viewDeInit, .extViewDeInit: return "deinit"
-            default: return self.rawValue
+            case .viewInit, .extViewInit: return "👍 init"
+            case .viewDeInit, .extViewDeInit: return "👎 deinit"
+            case .memoryWarning: return "☠️ Memory Warning"
+            default: return "👉🏼 \(self.rawValue)"
             }
         }
     }

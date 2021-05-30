@@ -1,17 +1,16 @@
 //
-//  TWBaseView.swift
-//  Pods-TWBaseUIKit_Example
+//  TWBaseTableView.swift
+//  Pods
 //
 //  Created by Jeehoon Son on 2021/05/29.
 //
 
 import Foundation
-import UIKit
 
-open class TWBaseView: UIView {
+class TWBaseTableView: UITableView {
     
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
+    public override init(frame: CGRect, style: UITableView.Style) {
+        super.init(frame: frame, style: style)
         initial()
     }
     
@@ -21,11 +20,11 @@ open class TWBaseView: UIView {
     }
     
     deinit {
-        manager.logging(type(of: self), type: .viewDeInit)
+        manager.logging(type(of: self), type: .extViewDeInit)
     }
     
     private func initial() {
-        manager.logging(type(of: self), type: .viewInit)
+        manager.logging(type(of: self), type: .extViewInit)
         
         addSubviews.forEach({ addSubview($0) })
         setup()
@@ -45,6 +44,5 @@ open class TWBaseView: UIView {
     open func setLayout() {
         
     }
+    
 }
-
- 

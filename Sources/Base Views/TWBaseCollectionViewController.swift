@@ -37,6 +37,11 @@ class TWBaseCollectionViewController: UICollectionViewController {
         statusBarColor
     }
     
+    open override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        manager.logging(type(of: self), type: .memoryWarning)
+    }
+    
     //MARK: - View Life Cycle
     open override func viewDidLoad() {
         super.viewDidLoad()

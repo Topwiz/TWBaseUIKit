@@ -66,6 +66,11 @@ open class TWBaseViewController: UIViewController {
         manager.logging(type(of: self), type: .viewDidDisappear)
     }
     
+    open override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        manager.logging(type(of: self), type: .memoryWarning)
+    }
+    
     //MARK: - Initial
     open func initial() {
 

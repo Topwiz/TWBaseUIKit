@@ -1,14 +1,13 @@
 //
-//  TWBaseView.swift
-//  Pods-TWBaseUIKit_Example
+//  TWBaseCollectionViewCell.swift
+//  Pods
 //
-//  Created by Jeehoon Son on 2021/05/29.
+//  Created by Jeehoon Son on 2021/05/30.
 //
 
 import Foundation
-import UIKit
 
-open class TWBaseView: UIView {
+class TWBaseCollectionViewCell: UICollectionViewCell {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,13 +20,13 @@ open class TWBaseView: UIView {
     }
     
     deinit {
-        manager.logging(type(of: self), type: .viewDeInit)
+        manager.logging(type(of: self), type: .extViewDeInit)
     }
     
     private func initial() {
-        manager.logging(type(of: self), type: .viewInit)
+        manager.logging(type(of: self), type: .extViewInit)
         
-        addSubviews.forEach({ addSubview($0) })
+        addSubviews.forEach({ contentView.addSubview($0) })
         setup()
         setLayout()
     }
@@ -45,6 +44,5 @@ open class TWBaseView: UIView {
     open func setLayout() {
         
     }
+    
 }
-
- 

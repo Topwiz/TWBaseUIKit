@@ -1,14 +1,13 @@
 //
-//  TWBaseTableViewController.swift
-//  Pods-TWBaseUIKit_Example
+//  TWBaseNavigationView.swift
+//  Pods
 //
-//  Created by Jeehoon Son on 2021/05/29.
+//  Created by Jeehoon Son on 2021/05/30.
 //
 
 import Foundation
-import UIKit
 
-class TWBaseTableViewController: UITableViewController {
+open class TWBaseNavigationController: UINavigationController {
     
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -35,11 +34,6 @@ class TWBaseTableViewController: UITableViewController {
     
     open override var preferredStatusBarStyle: UIStatusBarStyle {
         statusBarColor
-    }
-    
-    open override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        manager.logging(type(of: self), type: .memoryWarning)
     }
     
     //MARK: - View Life Cycle
@@ -71,6 +65,11 @@ class TWBaseTableViewController: UITableViewController {
         manager.logging(type(of: self), type: .viewDidDisappear)
     }
     
+    open override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        manager.logging(type(of: self), type: .memoryWarning)
+    }
+    
     //MARK: - Initial
     open func initial() {
 
@@ -88,4 +87,5 @@ class TWBaseTableViewController: UITableViewController {
     open func setLayout() {
 
     }
+    
 }

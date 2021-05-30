@@ -1,14 +1,13 @@
 //
-//  TWBaseTableViewController.swift
-//  Pods-TWBaseUIKit_Example
+//  TWBaseTabBarController.swift
+//  Pods
 //
-//  Created by Jeehoon Son on 2021/05/29.
+//  Created by Jeehoon Son on 2021/05/30.
 //
 
 import Foundation
-import UIKit
 
-class TWBaseTableViewController: UITableViewController {
+open class TWBaseTabBarController: UITabBarController {
     
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -88,4 +87,5 @@ class TWBaseTableViewController: UITableViewController {
     open func setLayout() {
 
     }
+    
 }
